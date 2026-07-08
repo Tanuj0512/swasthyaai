@@ -1,0 +1,40 @@
+# Local development only. Supabase Postgres is used in staging/production —
+# this file exists purely so the backend can be developed and tested fully
+# offline, without needing a Supabase project or network access.
+#
+# Usage:
+#   docker compose -f docker/docker-compose.local.yml up
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: swasthyaai
+    ports:
+      - "5432:5432"
+    volumes:
+      - swasthyaai_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    env_file:
+      - ../backend/.env
+    environment:
+      DATABASE_URL: postgresql+psycopg://postgres:postgres@postgres:5432/swasthyaai
+    ports:
+      - "8000:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  swasthyaai_pgdata:

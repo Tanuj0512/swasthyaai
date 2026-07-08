@@ -1,0 +1,89 @@
+@import "@fontsource/lexend/500.css";
+@import "@fontsource/lexend/600.css";
+@import "@fontsource/lexend/700.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Paper background, near-black ink text with a green undertone —
+       deliberately not pure white/black, ties to the health/teal identity. */
+    --background: 150 12% 97%;
+    --foreground: 160 24% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 24% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 24% 11%;
+
+    --primary: 176 71% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 15% 93%;
+    --secondary-foreground: 160 24% 11%;
+
+    --muted: 150 12% 93%;
+    --muted-foreground: 160 10% 38%;
+
+    --accent: 150 15% 93%;
+    --accent-foreground: 160 24% 11%;
+
+    --destructive: 4 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 14% 87%;
+    --input: 150 14% 87%;
+    --ring: 176 71% 21%;
+
+    --radius: 0.625rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "tnum" 1, "cv01" 1;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  /* Visible keyboard focus everywhere — non-negotiable for a government
+     service that must be usable by everyone. */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
