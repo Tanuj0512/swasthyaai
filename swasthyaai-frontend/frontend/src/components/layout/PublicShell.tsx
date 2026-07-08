@@ -45,7 +45,7 @@ export function PublicShell() {
 
           <Link
             to="/login"
-            className="rounded-md border border-border px-3 py-2 text-sm font-medium text-ink-900 hover:bg-secondary"
+            className="rounded-md bg-primary-700 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-600 hover:shadow-md"
           >
             Staff Login
           </Link>
