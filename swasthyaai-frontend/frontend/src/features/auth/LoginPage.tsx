@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
-import { HeartPulse, Loader2, LogIn } from "lucide-react";
+import {  Loader2, LogIn } from "lucide-react";
 
 import { useAuth } from "@/features/auth/AuthContext";
 import { Button } from "@/components/ui/button";
