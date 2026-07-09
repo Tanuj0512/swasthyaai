@@ -47,62 +47,72 @@ Benefits
 Required documents
 
 **Application steps**
-👨‍⚕️ Hospital Staff Journey
-Login using Staff Credentials.
-Open JanMitra Staff Mode.
+👨‍⚕️ Hospital Staff Journey->
+Login using Staff Credentials->
+Open JanMitra Staff Mode->
 Enter patient information or use existing patient records.
+
 **View:**
-Eligible schemes
-Required documents
-Missing information
+Eligible schemes,
+Required documents,
+Missing information,
 Recommended next steps
 
-🏥 PHC Operations Flow
+**🏥 PHC Operations Flow**
 
 After login:
 
-Dashboard
+
+**Dashboard**
 
 View:
 
-Medicine Inventory
-Doctor Attendance
-Bed Availability
-Patient Footfall
+Medicine Inventory,
+Doctor Attendance,
+Bed Availability,
+Patient Footfall,
 Critical Alerts
+
 Inventory Intelligence
 
 View:
 
-Current stock levels
-Predicted shortages
-Consumption trends
+Current stock levels,
+Predicted shortages,
+Consumption trends,
 Redistribution recommendations
+
+
 JanMitra Staff Portal
 
 View:
 
-Scheme eligibility results
-Benefits explanation
-Document checklist
+Scheme eligibility results,
+Benefits explanation,
+Document checklist,
 Application guidance
+
+
 District AI Copilot
 
 Ask questions such as:
 
-Which PHCs need attention today?
-Which medicines may run out this week?
+Which PHCs need attention today?,
+Which medicines may run out this week?,
 Which hospitals require redistribution support?
+
 
 The AI summarizes district-wide operational insights and recommendations.
 
+
 📋 Available Modules
-Module	Purpose
-Dashboard	PHC operational overview
-Inventory Intelligence	Stock forecasting and redistribution
-JanMitra	Healthcare scheme assistance
-District Copilot	District-level operational intelligence
+Module	Purpose,
+Dashboard	PHC operational overview,
+Inventory Intelligence	Stock forecasting and redistribution,
+JanMitra	Healthcare scheme assistance,
+District Copilot	District-level operational intelligence,
 Voice Assistant	Multilingual voice interactions
+
 
 ## 🛠 Development Setup
 
